@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!--
+  Intentionally empty. Vaulta stores the DEK in the macOS file-based keychain
+  (KeychainService pins kSecUseDataProtectionKeychain = false), which enforces
+  the Touch ID / Secure Enclave `.userPresence` ACL without any entitlement.
+  Do NOT add `keychain-access-groups` here: it requires a real signing team to
+  validate, and under ad-hoc signing it makes the app fail to launch (AMFI
+  rejects the spawn with "Launchd job spawn failed").
+-->
+<dict/>
+</plist>
